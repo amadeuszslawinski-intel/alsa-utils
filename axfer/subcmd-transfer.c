@@ -484,7 +484,7 @@ int subcmd_transfer(int argc, char *const *argv, snd_pcm_stream_t direction)
 	err = context_init(&ctx, direction, argc, argv);
 	if (err < 0)
 		goto end;
-	if (ctx.xfer.help || ctx.xfer.dump_hw_params)
+	if (ctx.xfer.help)
 		goto end;
 
 	err = context_pre_process(&ctx, direction, &expected_frame_count);
